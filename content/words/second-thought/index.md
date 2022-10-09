@@ -8,6 +8,6 @@ tags:
 
 # First thought
 
-This is my second original thought:
+This is my first original thought:
 
 > I'm hungry.
