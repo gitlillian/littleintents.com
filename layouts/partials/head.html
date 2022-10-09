@@ -1,0 +1,24 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+    <meta name="author" content="{{ .Site.Params.author }}" />
+    <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="keywords" content="{{ if .Params.tags }}{{ .Params.tags }}{{ else }}{{ .Site.Params.tags }}{{ end }}" />
+    <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}" />
+    <meta name="twitter:title" value="{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}" />
+    <meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="twitter:description" value="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.image }}" />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.image }}" />
+    <meta name="twitter:image:alt" content="{{ .Site.Params.author }}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:domain" value="{{ .Site.Params.domain }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta name="twitter:url" value="{{ .Permalink }}" />
+    <style>{{ (slice (resources.Get "css/style.css") (resources.Get "css/fontello.css") | resources.Concat "css/bundle.css" | resources.Minify).Content | safeCSS }}</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#a6cfb3" />
+</head>

@@ -1,0 +1,9 @@
+{{ define "main" }}
+<p class="post-meta">Around {{ .ReadingTime }} minutes ({{ .WordCount }} words). Published {{ .Date.Format "January 2, 2006" }}.</p>
+<ul id="tags" class="taglist">
+{{ range .Params.tags }}
+<li class="tag-li"><a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ end }}
+</ul>
+{{ .Content }}
+{{ end }}

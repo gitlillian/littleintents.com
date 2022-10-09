@@ -1,0 +1,24 @@
+baseURL = "https://littleintents.com/"
+languageCode = "en-us"
+title = "Lillian"
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+disableHugoGeneratorInject = true
+
+[params]
+  domain = "littleintents.com"
+  author = "Lillian"
+  description = "Lillian is a cool cat"
+  tags = "lillian"
+  image = "img/face.jpg"
+
+[blackfriday]
+  fractions = false
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  blog = "/words/:year/:month/:day/:filename/"
