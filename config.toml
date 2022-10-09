@@ -1,4 +1,4 @@
-baseURL = "https://littleintents.com/"
+baseURL = "https://www.littleintents.com/"
 languageCode = "en-us"
 title = "Lillian"
 
@@ -8,7 +8,7 @@ pygmentsUseClasses = true
 disableHugoGeneratorInject = true
 
 [params]
-  domain = "littleintents.com"
+  domain = "www.littleintents.com"
   author = "Lillian"
   description = "Lillian is a cool cat"
   tags = "lillian"
